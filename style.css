@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  visibility: hidden;
+}
+
+.one {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.two {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.three {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.four .text-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.fake-btn {
+  background: #ff69b4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.five p {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.idea-5 {
+  font-size: 3rem;
+  color: #ff69b4;
+}
+
+.six img {
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.wish-hbd {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#wishText {
+  font-size: 1.5rem;
+}
+
+.seven .balloons img {
+  width: 100px;
+  position: absolute;
+  animation: float 6s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-100vh); }
+}
+
+.eight svg {
+  width: 50px;
+  position: absolute;
+  animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nine p {
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
+
+#replay {
+  cursor: pointer;
+  color: #ff69b4;
+  text-decoration: underline;
+}
