@@ -12,13 +12,15 @@ body {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   visibility: hidden;
+  overflow: hidden;
 }
 
 .one {
@@ -77,15 +79,30 @@ body {
   font-size: 1.5rem;
 }
 
-.seven .balloons img {
+.seven {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.balloons img {
   width: 100px;
   position: absolute;
+  bottom: -100px;
   animation: float 6s infinite;
 }
 
 @keyframes float {
-  0% { transform: translateY(100vh); }
+  0% { transform: translateY(0); }
   100% { transform: translateY(-100vh); }
+}
+
+.eight {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .eight svg {
@@ -108,4 +125,25 @@ body {
   cursor: pointer;
   color: #ff69b4;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .one {
+    font-size: 2.5rem;
+  }
+  .two {
+    font-size: 1.2rem;
+  }
+  .three {
+    font-size: 2rem;
+  }
+  .six img {
+    width: 200px;
+  }
+  .wish-hbd {
+    font-size: 2rem;
+  }
+  #wishText {
+    font-size: 1.2rem;
+  }
 }
