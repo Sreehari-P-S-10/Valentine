@@ -8,144 +8,70 @@ body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   color: #fff;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
 .container {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  visibility: hidden;
-  overflow: hidden;
+  max-width: 600px;
+  padding: 20px;
 }
 
-.one {
-  font-size: 4rem;
+h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.two {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.three {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.four .text-box {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 40px;
-}
-
-.fake-btn {
-  background: #ff69b4;
+button {
   padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: inline-block;
-  margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
-.five p {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+#yesButton {
+  background-color: #ff69b4;
+  color: #fff;
 }
 
-.idea-5 {
-  font-size: 3rem;
-  color: #ff69b4;
+#noButton {
+  background-color: #ff6b6b;
+  color: #fff;
 }
 
-.six img {
-  width: 300px;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px;
-  margin-bottom: 20px;
+#response {
+  margin-top: 20px;
 }
 
-.wish-hbd {
-  font-size: 2.5rem;
+.emoji {
+  width: 100px;
+  height: auto;
   margin-bottom: 10px;
 }
 
-#wishText {
-  font-size: 1.5rem;
+.hidden {
+  display: none;
 }
 
-.seven {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.balloons img {
-  width: 100px;
-  height: auto; /* Maintain aspect ratio */
-  position: absolute;
-  bottom: -100px;
-  animation: float 6s infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100vh); }
-}
-
-.eight {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.eight svg {
-  width: 50px;
-  position: absolute;
-  animation: spin 4s infinite linear;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.nine p {
-  font-size: 1.5rem;
-  margin-top: 40px;
-}
-
-#replay {
-  cursor: pointer;
-  color: #ff69b4;
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
-  .one {
-    font-size: 2.5rem;
-  }
-  .two {
-    font-size: 1.2rem;
-  }
-  .three {
+@media screen and (max-width: 600px) {
+  h1 {
     font-size: 2rem;
   }
-  .six img {
-    width: 200px;
-  }
-  .wish-hbd {
-    font-size: 2rem;
-  }
-  #wishText {
-    font-size: 1.2rem;
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
   }
 }

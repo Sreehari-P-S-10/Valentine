@@ -1,22 +1,37 @@
-// Animation Timeline
-const animationTimeline = () => {
-  const tl = gsap.timeline();
+const yesButton = document.getElementById("yesButton");
+const noButton = document.getElementById("noButton");
+const response = document.getElementById("response");
 
-  tl.to(".container", { visibility: "visible", duration: 0.1 })
-    .from(".one", { opacity: 0, y: 50, duration: 0.8 })
-    .from(".two", { opacity: 0, y: 50, duration: 0.8 }, "-=0.5")
-    .from(".three", { opacity: 0, y: 50, duration: 0.8 }, "-=0.5")
-    .from(".four .text-box", { opacity: 0, scale: 0.5, duration: 0.8 }, "-=0.5")
-    .from(".five p", { opacity: 0, y: 50, stagger: 0.3, duration: 0.8 }, "-=0.5")
-    .from(".six img", { opacity: 0, scale: 0.5, duration: 0.8 }, "-=0.5")
-    .from(".seven .balloons img", { opacity: 0, y: 1000, stagger: 0.2, duration: 1.5 }, "-=0.5")
-    .from(".eight svg", { opacity: 0, scale: 0, stagger: 0.2, duration: 0.8 }, "-=0.5")
-    .from(".nine p", { opacity: 0, y: 50, duration: 0.8 }, "-=0.5");
+// Messages for the "No" button
+const noMessages = [
+  "Please rethink...",
+  "Are you sure?",
+  "Pretty please?",
+  "Pookie, say yes!",
+  "I'll cry if you say no...",
+  "Just click yes already!",
+];
 
-  // Replay animation
-  document.getElementById("replay").addEventListener("click", () => {
-    tl.restart();
-  });
-};
+let noClickCount = 0;
 
-animationTimeline();
+// Handle "Yes" button click
+yesButton.addEventListener("click", () => {
+  response.classList.remove("hidden");
+  yesButton.style.display = "none";
+  noButton.style.display = "none";
+});
+
+// Handle "No" button click
+noButton.addEventListener("click", () => {
+  // Increase size of "Yes" button
+  const currentYesSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+  yesButton.style.fontSize = `${currentYesSize + 5}px`;
+
+  // Decrease size of "No" button
+  const currentNoSize = parseFloat(window.getComputedStyle(noButton).fontSize);
+  noButton.style.fontSize = `${currentNoSize - 2}px`;
+
+  // Change "No" button text
+  noButton.textContent = noMessages[noClickCount % noMessages.length];
+  noClickCount++;
+});
