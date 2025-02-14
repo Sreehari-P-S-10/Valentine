@@ -66,6 +66,7 @@ body {
 
 .six img {
   width: 300px;
+  height: auto; /* Maintain aspect ratio */
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -88,6 +89,7 @@ body {
 
 .balloons img {
   width: 100px;
+  height: auto; /* Maintain aspect ratio */
   position: absolute;
   bottom: -100px;
   animation: float 6s infinite;
